@@ -27,6 +27,8 @@ namespace ProyectoProgra
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
+            int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
             string nombre = txtNombreCliente.Text;
             string telefono = txtTelefonoCliente.Text;
             string correo = txtCorreoCliente.Text;
@@ -50,7 +52,7 @@ namespace ProyectoProgra
             }
 
 
-            string linea = $"{nombre}|{telefono}|{correo}";
+            string linea = $"{id}|{nombre}|{telefono}|{correo}";
 
             try
             {
@@ -75,6 +77,7 @@ namespace ProyectoProgra
             }
 
             DataTable tabla = new DataTable();
+            tabla.Columns.Add("ID");
             tabla.Columns.Add("Nombre");
             tabla.Columns.Add("Teléfono");
             tabla.Columns.Add("Correo");
@@ -85,7 +88,7 @@ namespace ProyectoProgra
                 foreach (string linea in lineas)
                 {
                     string[] campos = linea.Split('|');
-                    if (campos.Length == 3)
+                    if (campos.Length == 4)
                     {
                         tabla.Rows.Add(campos);
                     }
@@ -100,6 +103,7 @@ namespace ProyectoProgra
         }
         private void LimpiarCampos()
         {
+            txtIdCliente.Clear();
             txtNombreCliente.Clear();
             txtTelefonoCliente.Clear();
             txtCorreoCliente.Clear();
@@ -108,6 +112,8 @@ namespace ProyectoProgra
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
+            int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
             string nombre = txtNombreCliente.Text;
             string telefono = txtTelefonoCliente.Text;
             string correo = txtCorreoCliente.Text;
@@ -135,6 +141,7 @@ namespace ProyectoProgra
             {
                 DataGridViewRow fila = dgvClientes.SelectedRows[0];
 
+                fila.Cells["ID"].Value = nombre;
                 fila.Cells["Nombre"].Value = nombre;
                 fila.Cells["Teléfono"].Value = telefono;
                 fila.Cells["Correo"].Value = correo;
@@ -155,6 +162,7 @@ namespace ProyectoProgra
         {
             if (e.RowIndex >= 0)
             {
+                txtIdCliente.Text = dgvClientes.Rows[e.RowIndex].Cells["ID"].Value?.ToString();
                 txtNombreCliente.Text = dgvClientes.Rows[e.RowIndex].Cells["Nombre"].Value?.ToString();
                 txtTelefonoCliente.Text = dgvClientes.Rows[e.RowIndex].Cells["Teléfono"].Value?.ToString();
                 txtCorreoCliente.Text = dgvClientes.Rows[e.RowIndex].Cells["Correo"].Value?.ToString();
@@ -171,10 +179,11 @@ namespace ProyectoProgra
             {
                 if (!fila.IsNewRow)
                 {
+                    string id = fila.Cells["ID"].Value?.ToString() ?? "0";
                     string nombre = fila.Cells["Nombre"].Value?.ToString();
                     string telefono = fila.Cells["Teléfono"].Value?.ToString();    
                     string correo = fila.Cells["Correo"].Value?.ToString();
-                    lineas.Add($"{nombre}|{telefono}|{correo}");
+                    lineas.Add($"{id}|{nombre}|{telefono}|{correo}");
                 }
             }
 

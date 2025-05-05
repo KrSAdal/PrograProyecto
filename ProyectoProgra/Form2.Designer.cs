@@ -42,6 +42,8 @@
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtBuscarNombre = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.lblIdCliente = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +70,7 @@
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Location = new System.Drawing.Point(41, 93);
+            this.lblCorreo.Location = new System.Drawing.Point(31, 108);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(51, 16);
             this.lblCorreo.TabIndex = 14;
@@ -76,7 +78,7 @@
             // 
             // txtCorreoCliente
             // 
-            this.txtCorreoCliente.Location = new System.Drawing.Point(98, 90);
+            this.txtCorreoCliente.Location = new System.Drawing.Point(88, 105);
             this.txtCorreoCliente.Name = "txtCorreoCliente";
             this.txtCorreoCliente.Size = new System.Drawing.Size(116, 22);
             this.txtCorreoCliente.TabIndex = 13;
@@ -84,7 +86,7 @@
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(28, 52);
+            this.lblTelefono.Location = new System.Drawing.Point(18, 74);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(64, 16);
             this.lblTelefono.TabIndex = 12;
@@ -92,7 +94,7 @@
             // 
             // txtTelefonoCliente
             // 
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(98, 52);
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(88, 74);
             this.txtTelefonoCliente.Name = "txtTelefonoCliente";
             this.txtTelefonoCliente.Size = new System.Drawing.Size(116, 22);
             this.txtTelefonoCliente.TabIndex = 11;
@@ -100,7 +102,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(33, 12);
+            this.lblNombre.Location = new System.Drawing.Point(23, 42);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(59, 16);
             this.lblNombre.TabIndex = 10;
@@ -108,7 +110,7 @@
             // 
             // txtNombreCliente
             // 
-            this.txtNombreCliente.Location = new System.Drawing.Point(98, 12);
+            this.txtNombreCliente.Location = new System.Drawing.Point(88, 42);
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(116, 22);
             this.txtNombreCliente.TabIndex = 9;
@@ -170,11 +172,30 @@
             this.lblBuscar.TabIndex = 23;
             this.lblBuscar.Text = "Buscar por nombre:";
             // 
+            // lblIdCliente
+            // 
+            this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.Location = new System.Drawing.Point(59, 15);
+            this.lblIdCliente.Name = "lblIdCliente";
+            this.lblIdCliente.Size = new System.Drawing.Size(23, 16);
+            this.lblIdCliente.TabIndex = 25;
+            this.lblIdCliente.Text = "ID:";
+            // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.Location = new System.Drawing.Point(88, 12);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.ReadOnly = true;
+            this.txtIdCliente.Size = new System.Drawing.Size(116, 22);
+            this.txtIdCliente.TabIndex = 24;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblIdCliente);
+            this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.txtBuscarNombre);
             this.Controls.Add(this.btnBuscarCliente);
@@ -214,5 +235,7 @@
         private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.TextBox txtBuscarNombre;
         private System.Windows.Forms.Label lblBuscar;
+        private System.Windows.Forms.Label lblIdCliente;
+        private System.Windows.Forms.TextBox txtIdCliente;
     }
 }

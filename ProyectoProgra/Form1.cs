@@ -38,5 +38,11 @@ namespace ProyectoProgra
             Form2 form2 = new Form2();
             form2.Show();
         }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4();
+            form4.Show();
+        }
     }
 }
