@@ -27,7 +27,7 @@ namespace ProyectoProgra
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
+            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
             int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
             string nombre = txtNombreCliente.Text;
             string telefono = txtTelefonoCliente.Text;
@@ -56,7 +56,7 @@ namespace ProyectoProgra
 
             try
             {
-                File.AppendAllText(@"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt", linea + Environment.NewLine);
+                File.AppendAllText(@"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt", linea + Environment.NewLine);
                 MessageBox.Show("Cliente guardado correctamente");
                 LimpiarCampos();
             }
@@ -68,7 +68,7 @@ namespace ProyectoProgra
 
         private void btnLeerClientes_Click(object sender, EventArgs e)
         {
-            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
+            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
             dgvClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             if (!File.Exists(rutaArchivo))
             {
@@ -112,7 +112,7 @@ namespace ProyectoProgra
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
+            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
             int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
             string nombre = txtNombreCliente.Text;
             string telefono = txtTelefonoCliente.Text;
@@ -172,7 +172,7 @@ namespace ProyectoProgra
 
         private void GuardarCambiosEnArchivo()
         {
-            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\archivosProyecto\clientes.txt";
+            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\archivosProyecto\clientes.txt";
             List<string> lineas = new List<string>();
 
             foreach (DataGridViewRow fila in dgvClientes.Rows)

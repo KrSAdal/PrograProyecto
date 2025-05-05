@@ -49,6 +49,8 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.btnLeerClientes = new System.Windows.Forms.Button();
+            this.btnGrafica = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,7 +124,7 @@
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.RowHeadersWidth = 51;
             this.dgvVentas.RowTemplate.Height = 24;
-            this.dgvVentas.Size = new System.Drawing.Size(526, 426);
+            this.dgvVentas.Size = new System.Drawing.Size(709, 449);
             this.dgvVentas.TabIndex = 34;
             this.dgvVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVentas_CellClick);
             // 
@@ -233,11 +235,33 @@
             this.btnLeerClientes.UseVisualStyleBackColor = true;
             this.btnLeerClientes.Click += new System.EventHandler(this.btnLeerClientes_Click);
             // 
+            // btnGrafica
+            // 
+            this.btnGrafica.Location = new System.Drawing.Point(28, 399);
+            this.btnGrafica.Name = "btnGrafica";
+            this.btnGrafica.Size = new System.Drawing.Size(197, 28);
+            this.btnGrafica.TabIndex = 48;
+            this.btnGrafica.Text = "Generar Grafica";
+            this.btnGrafica.UseVisualStyleBackColor = true;
+            this.btnGrafica.Click += new System.EventHandler(this.btnGrafica_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(28, 433);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(197, 28);
+            this.btnImprimir.TabIndex = 49;
+            this.btnImprimir.Text = "Imprimir Reporte";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(976, 474);
+            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnGrafica);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.txtCliente);
             this.Controls.Add(this.lblTotal);
@@ -291,5 +315,7 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnLeerClientes;
+        private System.Windows.Forms.Button btnGrafica;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

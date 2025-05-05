@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 
 namespace ProyectoProgra
@@ -26,7 +28,7 @@ namespace ProyectoProgra
 
         private void CargarProductos()
         {
-            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
             dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             if (!File.Exists(rutaArchivo))
             {
@@ -146,7 +148,7 @@ namespace ProyectoProgra
 
         private void GuardarCambiosEnArchivo()
         {
-            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
             List<string> nuevasLineas = new List<string>();
 
             foreach (DataGridViewRow fila in dgvVentas.Rows)
@@ -181,6 +183,72 @@ namespace ProyectoProgra
         private void btnLeerClientes_Click(object sender, EventArgs e)
         {
             CargarProductos();
+        }
+
+        private void btnGrafica_Click(object sender, EventArgs e)
+        {
+            Grafica grafica = new Grafica();
+            grafica.Show();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            // Ruta de salida
+            string rutaPDF = @"C:\Users\wander\Documents\ventas_generadas.pdf";
+
+            // Crear el documento y el escritor
+            Document documento = new Document(PageSize.A4, 10, 10, 10, 10);
+            try
+            {
+                PdfWriter.GetInstance(documento, new FileStream(rutaPDF, FileMode.Create));
+                documento.Open();
+
+                // Título del documento
+                Paragraph titulo = new Paragraph("REPORTE DE VENTAS")
+                {
+                    Alignment = Element.ALIGN_CENTER,
+                    SpacingAfter = 20f
+                };
+                documento.Add(titulo);
+
+                // Tabla con tantas columnas como el DataGridView
+                PdfPTable tabla = new PdfPTable(dgvVentas.Columns.Count);
+                tabla.WidthPercentage = 100;
+
+                // Agregar encabezados
+                foreach (DataGridViewColumn columna in dgvVentas.Columns)
+                {
+                    PdfPCell celdaEncabezado = new PdfPCell(new Phrase(columna.HeaderText))
+                    {
+                        BackgroundColor = new BaseColor(200, 200, 200),
+                        HorizontalAlignment = Element.ALIGN_CENTER
+                    };
+                    tabla.AddCell(celdaEncabezado);
+                }
+
+                // Agregar filas
+                foreach (DataGridViewRow fila in dgvVentas.Rows)
+                {
+                    if (!fila.IsNewRow)
+                    {
+                        foreach (DataGridViewCell celda in fila.Cells)
+                        {
+                            tabla.AddCell(celda.Value?.ToString());
+                        }
+                    }
+                }
+
+                documento.Add(tabla);
+                MessageBox.Show("PDF generado correctamente en: " + rutaPDF);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar el PDF: " + ex.Message);
+            }
+            finally
+            {
+                if (documento.IsOpen()) documento.Close();
+            }
         }
     }
 }

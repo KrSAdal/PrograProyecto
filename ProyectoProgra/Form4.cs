@@ -49,7 +49,7 @@ namespace ProyectoProgra
 
         private void CargarClientes()
         {
-            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
+            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
             List<Cliente> clientes = new List<Cliente>();
 
             if (File.Exists(ruta))
@@ -58,23 +58,22 @@ namespace ProyectoProgra
                 foreach (string linea in lineas)
                 {
                     string[] partes = linea.Split('|');
-                    if (partes.Length >= 2)
+                    if (partes.Length >= 2 && int.TryParse(partes[0].Trim(), out int idCliente))
                     {
                         clientes.Add(new Cliente
                         {
-                            Id = int.Parse(partes[0]),
-                            Nombre = partes[1]
+                            Id = idCliente,
+                            Nombre = partes[1].Trim()
                         });
                     }
                 }
-
                 cmbClientes.DataSource = clientes;
             }
         }
 
         private void CargarProductos()
         {
-            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             if (!File.Exists(rutaArchivo))
             {
@@ -166,7 +165,7 @@ namespace ProyectoProgra
 
         private void GuardarInventarioActualizado()
         {
-            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
             List<string> nuevasLineas = new List<string>();
 
             foreach (DataGridViewRow fila in dgvProductos.Rows)
@@ -188,7 +187,7 @@ namespace ProyectoProgra
 
         int ObtenerNuevoIdVenta()
         {
-            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt"; 
+            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt"; 
 
             if (!File.Exists(ruta))
                 return 1;
@@ -210,7 +209,7 @@ namespace ProyectoProgra
             }
 
             int idVenta = ObtenerNuevoIdVenta();
-            string rutaVentas = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string rutaVentas = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
 
             Cliente clienteSeleccionado = cmbClientes.SelectedItem as Cliente;
             if (clienteSeleccionado == null)
