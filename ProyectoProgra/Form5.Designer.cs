@@ -62,7 +62,7 @@
             // lblIdVenta
             // 
             this.lblIdVenta.AutoSize = true;
-            this.lblIdVenta.Location = new System.Drawing.Point(42, 21);
+            this.lblIdVenta.Location = new System.Drawing.Point(42, 94);
             this.lblIdVenta.Name = "lblIdVenta";
             this.lblIdVenta.Size = new System.Drawing.Size(61, 16);
             this.lblIdVenta.TabIndex = 41;
@@ -70,7 +70,7 @@
             // 
             // txtIdVenta
             // 
-            this.txtIdVenta.Location = new System.Drawing.Point(117, 18);
+            this.txtIdVenta.Location = new System.Drawing.Point(117, 91);
             this.txtIdVenta.Name = "txtIdVenta";
             this.txtIdVenta.ReadOnly = true;
             this.txtIdVenta.Size = new System.Drawing.Size(116, 22);
@@ -79,7 +79,7 @@
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Location = new System.Drawing.Point(52, 292);
+            this.lblBuscar.Location = new System.Drawing.Point(52, 365);
             this.lblBuscar.Name = "lblBuscar";
             this.lblBuscar.Size = new System.Drawing.Size(124, 16);
             this.lblBuscar.TabIndex = 39;
@@ -87,14 +87,14 @@
             // 
             // txtBuscarNombre
             // 
-            this.txtBuscarNombre.Location = new System.Drawing.Point(109, 312);
+            this.txtBuscarNombre.Location = new System.Drawing.Point(109, 385);
             this.txtBuscarNombre.Name = "txtBuscarNombre";
             this.txtBuscarNombre.Size = new System.Drawing.Size(116, 22);
             this.txtBuscarNombre.TabIndex = 38;
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(28, 311);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(28, 384);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarCliente.TabIndex = 37;
@@ -104,7 +104,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(36, 232);
+            this.btnEliminar.Location = new System.Drawing.Point(36, 305);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 36;
@@ -114,7 +114,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(117, 232);
+            this.btnEditar.Location = new System.Drawing.Point(117, 305);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 35;
@@ -125,7 +125,7 @@
             // dgvVentas
             // 
             this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVentas.Location = new System.Drawing.Point(255, 12);
+            this.dgvVentas.Location = new System.Drawing.Point(255, 85);
             this.dgvVentas.Name = "dgvVentas";
             this.dgvVentas.RowHeadersWidth = 51;
             this.dgvVentas.RowTemplate.Height = 24;
@@ -136,7 +136,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(37, 114);
+            this.lblCantidad.Location = new System.Drawing.Point(37, 187);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(64, 16);
             this.lblCantidad.TabIndex = 31;
@@ -144,7 +144,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(117, 111);
+            this.txtCantidad.Location = new System.Drawing.Point(117, 184);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(116, 22);
             this.txtCantidad.TabIndex = 30;
@@ -152,7 +152,7 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(37, 83);
+            this.lblProducto.Location = new System.Drawing.Point(37, 156);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(64, 16);
             this.lblProducto.TabIndex = 29;
@@ -160,7 +160,7 @@
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(117, 80);
+            this.txtProducto.Location = new System.Drawing.Point(117, 153);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(116, 22);
             this.txtProducto.TabIndex = 28;
@@ -168,7 +168,7 @@
             // lblIdProducto
             // 
             this.lblIdProducto.AutoSize = true;
-            this.lblIdProducto.Location = new System.Drawing.Point(21, 54);
+            this.lblIdProducto.Location = new System.Drawing.Point(21, 127);
             this.lblIdProducto.Name = "lblIdProducto";
             this.lblIdProducto.Size = new System.Drawing.Size(80, 16);
             this.lblIdProducto.TabIndex = 27;
@@ -176,7 +176,7 @@
             // 
             // txtIdProducto
             // 
-            this.txtIdProducto.Location = new System.Drawing.Point(117, 48);
+            this.txtIdProducto.Location = new System.Drawing.Point(117, 121);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.ReadOnly = true;
             this.txtIdProducto.Size = new System.Drawing.Size(116, 22);
@@ -185,7 +185,7 @@
             // lblPrecioU
             // 
             this.lblPrecioU.AutoSize = true;
-            this.lblPrecioU.Location = new System.Drawing.Point(3, 142);
+            this.lblPrecioU.Location = new System.Drawing.Point(3, 215);
             this.lblPrecioU.Name = "lblPrecioU";
             this.lblPrecioU.Size = new System.Drawing.Size(98, 16);
             this.lblPrecioU.TabIndex = 43;
@@ -193,7 +193,7 @@
             // 
             // txtPrecioU
             // 
-            this.txtPrecioU.Location = new System.Drawing.Point(117, 139);
+            this.txtPrecioU.Location = new System.Drawing.Point(117, 212);
             this.txtPrecioU.Name = "txtPrecioU";
             this.txtPrecioU.Size = new System.Drawing.Size(116, 22);
             this.txtPrecioU.TabIndex = 42;
@@ -201,7 +201,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(50, 202);
+            this.lblCliente.Location = new System.Drawing.Point(50, 275);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(51, 16);
             this.lblCliente.TabIndex = 47;
@@ -209,7 +209,7 @@
             // 
             // txtCliente
             // 
-            this.txtCliente.Location = new System.Drawing.Point(117, 199);
+            this.txtCliente.Location = new System.Drawing.Point(117, 272);
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(116, 22);
             this.txtCliente.TabIndex = 46;
@@ -217,7 +217,7 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(60, 170);
+            this.lblTotal.Location = new System.Drawing.Point(60, 243);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(41, 16);
             this.lblTotal.TabIndex = 45;
@@ -225,14 +225,14 @@
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(117, 167);
+            this.txtTotal.Location = new System.Drawing.Point(117, 240);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(116, 22);
             this.txtTotal.TabIndex = 44;
             // 
             // btnLeerClientes
             // 
-            this.btnLeerClientes.Location = new System.Drawing.Point(74, 355);
+            this.btnLeerClientes.Location = new System.Drawing.Point(74, 428);
             this.btnLeerClientes.Name = "btnLeerClientes";
             this.btnLeerClientes.Size = new System.Drawing.Size(94, 28);
             this.btnLeerClientes.TabIndex = 33;
@@ -242,7 +242,7 @@
             // 
             // btnGrafica
             // 
-            this.btnGrafica.Location = new System.Drawing.Point(28, 399);
+            this.btnGrafica.Location = new System.Drawing.Point(28, 472);
             this.btnGrafica.Name = "btnGrafica";
             this.btnGrafica.Size = new System.Drawing.Size(197, 28);
             this.btnGrafica.TabIndex = 48;
@@ -252,7 +252,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(28, 433);
+            this.btnImprimir.Location = new System.Drawing.Point(28, 506);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(197, 28);
             this.btnImprimir.TabIndex = 49;
@@ -267,19 +267,19 @@
             this.actualizarToolStripMenuItem,
             this.informaciónToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 52);
             // 
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
             // informaciónToolStripMenuItem
             // 
             this.informaciónToolStripMenuItem.Name = "informaciónToolStripMenuItem";
-            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.informaciónToolStripMenuItem.Text = "Información";
             this.informaciónToolStripMenuItem.Click += new System.EventHandler(this.informaciónToolStripMenuItem_Click);
             // 
@@ -287,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 474);
+            this.ClientSize = new System.Drawing.Size(976, 546);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnGrafica);
             this.Controls.Add(this.lblCliente);

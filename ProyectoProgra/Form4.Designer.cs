@@ -50,7 +50,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(25, 23);
+            this.lblCliente.Location = new System.Drawing.Point(25, 116);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(51, 16);
             this.lblCliente.TabIndex = 0;
@@ -59,7 +59,7 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(224, 23);
+            this.lblProducto.Location = new System.Drawing.Point(224, 116);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(64, 16);
             this.lblProducto.TabIndex = 1;
@@ -68,7 +68,7 @@
             // cmbClientes
             // 
             this.cmbClientes.FormattingEnabled = true;
-            this.cmbClientes.Location = new System.Drawing.Point(82, 20);
+            this.cmbClientes.Location = new System.Drawing.Point(82, 113);
             this.cmbClientes.Name = "cmbClientes";
             this.cmbClientes.Size = new System.Drawing.Size(121, 24);
             this.cmbClientes.TabIndex = 2;
@@ -77,7 +77,7 @@
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Location = new System.Drawing.Point(294, 12);
+            this.dgvProductos.Location = new System.Drawing.Point(294, 105);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.RowHeadersWidth = 51;
             this.dgvProductos.RowTemplate.Height = 24;
@@ -86,7 +86,7 @@
             // 
             // btnAgregarProducto
             // 
-            this.btnAgregarProducto.Location = new System.Drawing.Point(478, 175);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(478, 268);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(122, 30);
             this.btnAgregarProducto.TabIndex = 20;
@@ -97,7 +97,7 @@
             // lblCarrito
             // 
             this.lblCarrito.AutoSize = true;
-            this.lblCarrito.Location = new System.Drawing.Point(10, 225);
+            this.lblCarrito.Location = new System.Drawing.Point(10, 318);
             this.lblCarrito.Name = "lblCarrito";
             this.lblCarrito.Size = new System.Drawing.Size(49, 16);
             this.lblCarrito.TabIndex = 21;
@@ -106,7 +106,7 @@
             // dgvCarrito
             // 
             this.dgvCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCarrito.Location = new System.Drawing.Point(65, 211);
+            this.dgvCarrito.Location = new System.Drawing.Point(65, 304);
             this.dgvCarrito.Name = "dgvCarrito";
             this.dgvCarrito.RowHeadersWidth = 51;
             this.dgvCarrito.RowTemplate.Height = 24;
@@ -115,7 +115,7 @@
             // 
             // btnFinalizarCompra
             // 
-            this.btnFinalizarCompra.Location = new System.Drawing.Point(351, 408);
+            this.btnFinalizarCompra.Location = new System.Drawing.Point(351, 501);
             this.btnFinalizarCompra.Name = "btnFinalizarCompra";
             this.btnFinalizarCompra.Size = new System.Drawing.Size(122, 30);
             this.btnFinalizarCompra.TabIndex = 23;
@@ -126,7 +126,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(12, 67);
+            this.lblCantidad.Location = new System.Drawing.Point(12, 160);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(64, 16);
             this.lblCantidad.TabIndex = 24;
@@ -134,7 +134,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(82, 64);
+            this.txtCantidad.Location = new System.Drawing.Point(82, 157);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(121, 22);
             this.txtCantidad.TabIndex = 25;
@@ -146,19 +146,19 @@
             this.actualizarToolStripMenuItem,
             this.informaciónToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 52);
             // 
             // actualizarToolStripMenuItem
             // 
             this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
             // informaciónToolStripMenuItem
             // 
             this.informaciónToolStripMenuItem.Name = "informaciónToolStripMenuItem";
-            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.informaciónToolStripMenuItem.Text = "Información";
             this.informaciónToolStripMenuItem.Click += new System.EventHandler(this.informaciónToolStripMenuItem_Click);
             // 
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 559);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnFinalizarCompra);

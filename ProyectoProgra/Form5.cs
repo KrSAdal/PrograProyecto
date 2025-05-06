@@ -10,15 +10,24 @@ using System.Windows.Forms;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace ProyectoProgra
 {
-    public partial class Form5 : Form
+    public partial class Form5 : MaterialForm
     {
         public Form5()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Indigo500, Primary.Indigo700,
+                Primary.Indigo100, Accent.Indigo200,
+                TextShade.WHITE
+            );
         }
 
         private void Form5_Load(object sender, EventArgs e)

@@ -9,14 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace ProyectoProgra
 {
-    public partial class Form4 : Form
+    public partial class Form4 : MaterialForm
     {
         public Form4()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Indigo500, Primary.Indigo700,
+                Primary.Indigo100, Accent.Indigo200,
+                TextShade.WHITE
+            );
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

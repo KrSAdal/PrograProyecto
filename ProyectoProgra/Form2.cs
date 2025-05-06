@@ -9,15 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 
 namespace ProyectoProgra
 {
-    public partial class Form2 : Form
+    public partial class Form2 : MaterialForm
     {
         public Form2()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Indigo500, Primary.Indigo700,
+                Primary.Indigo100, Accent.Indigo200,
+                TextShade.WHITE
+            );
         }
 
         private void Form2_Load(object sender, EventArgs e)

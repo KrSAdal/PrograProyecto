@@ -19,7 +19,7 @@ namespace ProyectoProgra
         {
             InitializeComponent();
 
-            // Configuración de MaterialSkin con tema oscuro
+            // Configuración de MaterialSkin con tema 
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;

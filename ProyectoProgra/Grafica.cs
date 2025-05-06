@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace ProyectoProgra
 {
-    public partial class Grafica : Form
+    public partial class Grafica : MaterialForm
     {
         public Grafica()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Indigo500, Primary.Indigo700,
+                Primary.Indigo100, Accent.Indigo200,
+                TextShade.WHITE
+            );
         }
 
         private void Grafica_Load(object sender, EventArgs e)

@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace ProyectoProgra
 {
-    public partial class Form1 : Form
+    public partial class Form1 : MaterialForm
     {
         private string tipoUsuario;
 
@@ -18,6 +20,15 @@ namespace ProyectoProgra
         {
             InitializeComponent();
             tipoUsuario = usuario;
+
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Indigo500, Primary.Indigo700,
+                Primary.Indigo100, Accent.Indigo200,
+                TextShade.WHITE
+            );
         }
 
         private void button1_Click(object sender, EventArgs e)
