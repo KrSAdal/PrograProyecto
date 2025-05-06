@@ -28,9 +28,14 @@ namespace ProyectoProgra
 
         private void CargarProductos()
         {
+
             string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+
             dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             if (!File.Exists(rutaArchivo))
+            
+
             {
                 MessageBox.Show("El archivo de productos no existe.");
                 return;
@@ -148,7 +153,11 @@ namespace ProyectoProgra
 
         private void GuardarCambiosEnArchivo()
         {
+
+
+
             string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+
             List<string> nuevasLineas = new List<string>();
 
             foreach (DataGridViewRow fila in dgvVentas.Rows)

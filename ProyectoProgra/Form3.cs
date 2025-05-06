@@ -21,7 +21,9 @@ namespace ProyectoProgra
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
             string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+
             int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
 
             string NombreProducto = txtNombreProducto.Text;
@@ -44,7 +46,9 @@ namespace ProyectoProgra
 
             try
             {
+
                 File.AppendAllText(@"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt", linea + Environment.NewLine);
+
                 MessageBox.Show("Producto guardado correctamente");
                 LimpiarCampos();
             }
@@ -70,7 +74,10 @@ namespace ProyectoProgra
 
         private void btnLeerClientes_Click(object sender, EventArgs e)
         {
+
+
             string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             if (!File.Exists(rutaArchivo))
             {
@@ -120,7 +127,10 @@ namespace ProyectoProgra
         }
         private void GuardarCambiosEnArchivo()
         {
+
+
             string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+
             List<string> lineas = new List<string>();
 
             foreach (DataGridViewRow fila in dgvProductos.Rows)
@@ -141,7 +151,10 @@ namespace ProyectoProgra
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
+
             string ruta = @"C:\Users\Adal\wander\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+
             int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
 
             string NombreProducto = txtNombreProducto.Text;

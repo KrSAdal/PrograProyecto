@@ -12,9 +12,12 @@ namespace ProyectoProgra
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private string tipoUsuario;
+
+        public Form1(string usuario)
         {
             InitializeComponent();
+            tipoUsuario = usuario;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,8 +33,16 @@ namespace ProyectoProgra
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (tipoUsuario == "ventas")
+            {
+                btnProductos.Visible = false;
+                btnReportes.Visible = false;
+                btnVentas.Visible = true; 
+                btnClientes.Visible = false; 
+            }
         }
+
+
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
@@ -49,6 +60,34 @@ namespace ProyectoProgra
         {
             Form5 form5 = new Form5();
             form5.Show();
+        }
+
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form6 form6 = new Form6();
+            form6.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actualizando...");
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Versión 1.0 - Proyecto de Práctica.");
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
