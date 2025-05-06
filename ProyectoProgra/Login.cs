@@ -27,7 +27,7 @@ namespace ProyectoProgra
             string usuario = txtUsuario.Text;
             string contrasena = txtContrasena.Text;
 
-            if (usuario == "admin" && contrasena == "1234")
+            if (usuario == "admin" && contrasena == "123")
             {
                 Form1 menuPrincipal = new Form1("admin");
                 menuPrincipal.Show();

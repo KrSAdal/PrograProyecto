@@ -29,7 +29,7 @@ namespace ProyectoProgra
         private void CargarProductos()
         {
 
-            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
 
             dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -156,7 +156,7 @@ namespace ProyectoProgra
 
 
 
-            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
 
             List<string> nuevasLineas = new List<string>();
 
@@ -203,7 +203,7 @@ namespace ProyectoProgra
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             // Ruta de salida
-            string rutaPDF = @"C:\Users\wander\Documents\ventas_generadas.pdf";
+            string rutaPDF = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas_generadas.pdf";
 
             // Crear el documento y el escritor
             Document documento = new Document(PageSize.A4, 10, 10, 10, 10);
@@ -258,6 +258,16 @@ namespace ProyectoProgra
             {
                 if (documento.IsOpen()) documento.Close();
             }
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actualizando...");
+        }
+
+        private void informaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Versión 1.0 - Proyecto de Práctica.");
         }
     }
 }

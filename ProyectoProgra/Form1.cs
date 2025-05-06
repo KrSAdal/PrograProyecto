@@ -78,14 +78,14 @@ namespace ProyectoProgra
             MessageBox.Show("Versión 1.0 - Proyecto de Práctica.");
         }
 
-        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Login login = new Login();
             login.Show();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void cerrarProgramaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

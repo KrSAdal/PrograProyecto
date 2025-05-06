@@ -51,7 +51,7 @@ namespace ProyectoProgra
         {
 
 
-            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
+            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\clientes.txt";
 
             List<Cliente> clientes = new List<Cliente>();
 
@@ -79,7 +79,7 @@ namespace ProyectoProgra
         {
 
 
-            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
 
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             if (!File.Exists(rutaArchivo))
@@ -175,7 +175,7 @@ namespace ProyectoProgra
 
             
 
-            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
 
             List<string> nuevasLineas = new List<string>();
 
@@ -201,7 +201,7 @@ namespace ProyectoProgra
 
             
 
-            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt"; 
+            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt"; 
 
 
             if (!File.Exists(ruta))
@@ -226,7 +226,7 @@ namespace ProyectoProgra
             int idVenta = ObtenerNuevoIdVenta();
 
 
-            string rutaVentas = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string rutaVentas = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
 
 
             Cliente clienteSeleccionado = cmbClientes.SelectedItem as Cliente;
@@ -251,6 +251,16 @@ namespace ProyectoProgra
             carrito.Clear();
             dgvCarrito.DataSource = null;
             dgvCarrito.DataSource = carrito;
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actualizando...");
+        }
+
+        private void informaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Versión 1.0 - Proyecto de Práctica.");
         }
     }
 }

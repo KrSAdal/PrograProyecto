@@ -41,7 +41,7 @@ namespace ProyectoProgra
 
         private void MostrarGraficaProductosVendidos()
         {
-            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
 
             if (!File.Exists(rutaArchivo))
             {
@@ -86,7 +86,7 @@ namespace ProyectoProgra
 
         private void MostrarGraficaVentasPorCliente()
         {
-            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
+            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\ventas.txt";
 
             if (!File.Exists(rutaArchivo))
             {
@@ -127,6 +127,26 @@ namespace ProyectoProgra
             }
 
             chart1.Series.Add(serie);
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actualizando...");
+        }
+
+        private void informaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Versión 1.0 - Proyecto de Práctica.");
         }
     }
 }

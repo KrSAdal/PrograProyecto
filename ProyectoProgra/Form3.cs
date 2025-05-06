@@ -22,7 +22,7 @@ namespace ProyectoProgra
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            string ruta = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string ruta = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
 
             int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
 
@@ -47,7 +47,7 @@ namespace ProyectoProgra
             try
             {
 
-                File.AppendAllText(@"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt", linea + Environment.NewLine);
+                File.AppendAllText(@"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt", linea + Environment.NewLine);
 
                 MessageBox.Show("Producto guardado correctamente");
                 LimpiarCampos();
@@ -76,7 +76,7 @@ namespace ProyectoProgra
         {
 
 
-            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
 
             dgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             if (!File.Exists(rutaArchivo))
@@ -129,7 +129,7 @@ namespace ProyectoProgra
         {
 
 
-            string rutaArchivo = @"C:\Users\wander\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string rutaArchivo = @"C:\Users\Adal\Documents\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
 
             List<string> lineas = new List<string>();
 
@@ -153,7 +153,7 @@ namespace ProyectoProgra
         {
 
 
-            string ruta = @"C:\Users\Adal\wander\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
+            string ruta = @"C:\Users\Adal\2025 CUNOR\Introducción a Progra\archivosProyecto\productos.txt";
 
             int id = File.Exists(ruta) ? File.ReadAllLines(ruta).Length : 0;
 
@@ -235,6 +235,15 @@ namespace ProyectoProgra
 
         }
 
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Actualizando...");
+        }
+
+        private void informaciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Versión 1.0 - Proyecto de Práctica.");
+        }
     }
     
 }
